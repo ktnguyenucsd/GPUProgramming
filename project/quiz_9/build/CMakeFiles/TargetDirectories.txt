@@ -1,0 +1,3 @@
+C:/Users/ktnguyen/Documents/project/quiz_9/build/CMakeFiles/ImageConvolution.dir
+C:/Users/ktnguyen/Documents/project/quiz_9/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/ktnguyen/Documents/project/quiz_9/build/CMakeFiles/ZERO_CHECK.dir

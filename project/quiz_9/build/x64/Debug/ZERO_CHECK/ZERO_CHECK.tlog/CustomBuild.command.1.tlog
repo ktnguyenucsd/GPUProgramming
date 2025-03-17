@@ -1,0 +1,10 @@
+^C:\USERS\KTNGUYEN\DOCUMENTS\PROJECT\QUIZ_9\BUILD\CMAKEFILES\FE880B6CD26081D373997FE8ADD0CD3C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/ktnguyen/Documents/project/quiz_9 -BC:/Users/ktnguyen/Documents/project/quiz_9/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/ktnguyen/Documents/project/quiz_9/build/ImageConvolution.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

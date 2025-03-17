@@ -1,0 +1,5 @@
+﻿cl : command line warning D9002: ignoring unknown option '-std=c++0x'
+  convolution.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\ostream(743,1): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Users\ktnguyen\Documents\project\quiz_9\Src\convolution.cpp(46): message : see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)' being compiled
+  ImageConvolution.vcxproj -> C:\Users\ktnguyen\Documents\project\quiz_9\build\Debug\ImageConvolution.exe
