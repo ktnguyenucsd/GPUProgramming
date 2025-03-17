@@ -1,0 +1,3 @@
+C:/Users/ktnguyen/Downloads/quiz_9/quiz_9/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/ktnguyen/Downloads/quiz_9/quiz_9/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/ktnguyen/Downloads/quiz_9/quiz_9/build/Src/stream/CMakeFiles/quiz.dir

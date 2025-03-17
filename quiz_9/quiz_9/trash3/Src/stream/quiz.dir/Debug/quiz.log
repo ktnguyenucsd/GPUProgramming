@@ -1,0 +1,25 @@
+﻿  Building Custom Rule C:/Users/ktnguyen/Downloads/quiz_9/quiz_9/Src/stream/CMakeLists.txt
+  Compiling CUDA source file ..\..\..\Src\stream\quiz.cu...
+  
+  C:\Users\ktnguyen\Downloads\quiz_9\quiz_9\build\Src\stream>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64" -x cu -rdc=true  -IC:\Users\ktnguyen\Downloads\quiz_9\quiz_9\Src -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\include" -I"C:\Program Files\NVIDIA Corporation\NvToolsExt\include" -I"C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1\common\inc" -IC:\Users\ktnguyen\Downloads\quiz_9\quiz_9\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\include"     --keep-dir x64\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -std=c++14 --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler="/EHsc -Zi -Ob0" -g  -D_WINDOWS -DBUILD_THIRDPARTY:BOOL=ON -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -DBUILD_THIRDPARTY:BOOL=ON -D"CMAKE_INTDIR=\"Debug\"" -Xcompiler "/EHsc /W3 /nologo /Od /Fdquiz.dir\Debug\vc142.pdb /FS /Zi /RTC1 /MDd /GR" -o quiz.dir\Debug\quiz.obj "C:\Users\ktnguyen\Downloads\quiz_9\quiz_9\Src\stream\quiz.cu" 
+  quiz.cu
+  
+  C:\Users\ktnguyen\Downloads\quiz_9\quiz_9\build\Src\stream>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin\nvcc.exe" -dlink -o quiz.dir\Debug\quiz.device-link.obj -Xcompiler "/EHsc /W3 /nologo /Od /Fdquiz.dir\Debug\vc142.pdb /Zi /RTC1 /MDd /GR" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\bin/crt" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.6\lib\x64" cudadevrt.lib cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib -forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets -D_WINDOWS -Xcompiler="/W3 /GR /EHsc" -Xcompiler="-MDd  -Zi -Ob0 -Od /RTC1" "--generate-code=arch=compute_52,code=[compute_52,sm_52]"   --machine 64 quiz.dir\Debug\quiz.obj 
+  cudadevrt.lib
+  cudart_static.lib
+  kernel32.lib
+  user32.lib
+  gdi32.lib
+  winspool.lib
+  shell32.lib
+  ole32.lib
+  oleaut32.lib
+  uuid.lib
+  comdlg32.lib
+  advapi32.lib
+  quiz.obj
+     Creating library C:/Users/ktnguyen/Downloads/quiz_9/quiz_9/build/Src/stream/Debug/quiz.lib and object C:/Users/ktnguyen/Downloads/quiz_9/quiz_9/build/Src/stream/Debug/quiz.exp
+quiz.obj : error LNK2019: unresolved external symbol stbi_load referenced in function main
+quiz.obj : error LNK2019: unresolved external symbol stbi_image_free referenced in function main
+quiz.obj : error LNK2019: unresolved external symbol stbi_write_jpg referenced in function main
+C:\Users\ktnguyen\Downloads\quiz_9\quiz_9\build\Src\stream\Debug\quiz.exe : fatal error LNK1120: 3 unresolved externals

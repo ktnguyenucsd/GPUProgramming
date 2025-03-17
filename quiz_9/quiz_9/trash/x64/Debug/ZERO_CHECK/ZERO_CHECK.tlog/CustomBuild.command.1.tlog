@@ -1,0 +1,10 @@
+^C:\USERS\KTNGUYEN\DOWNLOADS\QUIZ_9\QUIZ_9\BUILD\CMAKEFILES\887E7BAD3F7D7CFC4867A9DCC8DD1D56\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/ktnguyen/Downloads/quiz_9/quiz_9 -BC:/Users/ktnguyen/Downloads/quiz_9/quiz_9/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/ktnguyen/Downloads/quiz_9/quiz_9/build/Quiz9.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
