@@ -85,12 +85,17 @@ int main() {
     unsigned char* h_output_cpu = new unsigned char[width * height];
     unsigned char* h_output_gpu = new unsigned char[width * height];
 
-    // Measure CPU Execution Time
+// Measure CPU Execution Time (50 runs for fair comparison)
     auto start_cpu = high_resolution_clock::now();
-    convolveCPU(h_input, h_output_cpu, width, height);
+    for (int i = 0; i < 50; i++) {
+        convolveCPU(h_input, h_output_cpu, width, height);
+    }
     auto stop_cpu = high_resolution_clock::now();
+
+    // Compute and print average execution time
     auto cpu_duration = duration_cast<milliseconds>(stop_cpu - start_cpu);
-    cout << "CPU Convolution Time: " << cpu_duration.count() << " ms" << endl;
+    cout << "CPU Convolution Time (100 runs avg): " << cpu_duration.count() / 50.0 << " ms" << endl;
+
 
     // Allocate Memory on GPU
     unsigned char* d_input, * d_output;
@@ -107,8 +112,8 @@ int main() {
 
     cudaEventRecord(start);
 
-    // ✅ Run the kernel 100 times to prevent GPU power throttling
-    for (int i = 0; i < 100; i++) {
+    // ✅ Run the kernel 50 times to prevent GPU power throttling
+    for (int i = 0; i < 50; i++) {
         convolveCUDA << <dim3((width + BLOCK_SIZE - 1) / BLOCK_SIZE, (height + BLOCK_SIZE - 1) / BLOCK_SIZE), dim3(BLOCK_SIZE, BLOCK_SIZE) >> > (d_input, d_output, width, height);
     }
 
@@ -118,7 +123,7 @@ int main() {
 
     float milliseconds = 0;
     cudaEventElapsedTime(&milliseconds, start, stop);
-    cout << "GPU Convolution Time (100 runs avg): " << milliseconds / 100 << " ms" << endl;
+    cout << "GPU Convolution Time (100 runs avg): " << milliseconds / 50.0 << " ms" << endl;
 
     // Copy Output Image from GPU to Host
     cudaMemcpy(h_output_gpu, d_output, img_size, cudaMemcpyDeviceToHost);
